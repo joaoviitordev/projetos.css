@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito maquina de escrever!</title>
+</head>
+<body>
+  <center><p>Olá, Mundo</p></center>
+<style>
+ p{
+    font-family: monospace; /* fonte estilo de maquina de escrever*/
+    border-right: 4px solid;
+    width: 10ch; /* exatamente a quantidade de caracteres que tem em <p> */
+    white-space: nowrap; /* para não quebrar a linha */
+    overflow: hidden; /* para esconder o que não foi digitado */
+    animation: typing 2s steps(10), /* steps representa a quantidade de caracteres*/
+    blinking 0.5s infinite step-end
+    alternate;
+    
+ }
+@keyframes typing { /* animação escrevendo*/
+    from {
+      width: 0;  
+    }
+}
+@keyframes blinking { /* animação psicando */
+    50% {
+        border-color: transparent;
+    }
+}
+body{
+    background-color: bisque;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,53 @@
+*{   /* centralizar qualquer parte do documento na tela */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body{  /* todo o body foi so pra centralizar o <p> */
+    display: flex;            
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #151329; 
+}
+
+.caixa{  /* tamanho da caixa */
+    position: relative;
+    width: 400px;
+    height: 400px;
+    color: #fff;
+    background: #151329;
+    display: flex;    /* para alinhar o texto */ 
+    align-items: center;  /* para alinhar o texto */ 
+    justify-content: center;  /* para alinhar o texto */
+    border-radius: 5px;
+    font: bold 2em 'Century Gothic';
+    text-transform: uppercase; /* tudo em maiusculas */
+}
+
+.caixa::before, .caixa::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000,
+    #ffff00, #00ff00, #0099ff, #001aff, #a200ff);  /* todas as cores que ficam circulando */
+    background-size: 300%;
+    border-radius: 8px;
+    animation: AnimarBorda 10s linear alternate infinite;  /* efetiva a animação */
+}
+
+.caixa::after{  /* efeito de luz/sombra */
+    filter: blur(50px);
+}
+
+@keyframes AnimarBorda {   /* faz parte da animação */
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 300%;
+    }
+}

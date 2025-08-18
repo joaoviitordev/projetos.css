@@ -1,0 +1,20 @@
+.center{
+    background: linear-gradient(to left, #69a1d1, #ca3f85); /* da a cor gradiente no titulo */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* para o background aparecer */
+    background-clip: text;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+h1{
+    text-align: center;
+}  
